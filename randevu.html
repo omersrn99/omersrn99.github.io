@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.4/themes/blitzer/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#as').datepicker({
+			beforeShowDay:disablesunday
+		});
+			function disablesunday(sunday){
+				var calendarday=sunday.getDay();
+				return [(calendarday>0)];
+			};
+	});
+</script>
+	<link rel="stylesheet" type="text/css" href="css/randevu.css">
+	
+</head>
+<body>
+	<div class="container">
+		<div class="container-time">
+			<h2 class="heading">Çalışma Günlerimiz</h2>
+			<h3 class="heading-days">Pazartesi-Cuma</h3>
+			<p>08.00-12.00</p>
+			<p>13.00-18.00</p>
+
+
+			<h3 class="heading-days">Cumartesi</h3>
+			<p>08.00-12.00</p>
+			<p>13.00-18.00</p>
+
+			<hr>
+
+			<h4 class="heading-phone"> (+90)542 566 60 48</h4>
+
+
+
+		</div>
+		<div class="container-form">
+			<form class="for" action="#">
+				<h2 class="heading heading-red"> Randevu Al</h2>
+				<div class="form-field">
+					<p>Ad</p>
+					<input type="text" placeholder="Ad">
+				</div>
+				<div class="form-field">
+					<p>Soyad</p>
+					<input type="text" placeholder="Soyad">
+				</div>
+				<div class="form-field">
+					<p>Email</p>
+					<input type="text" placeholder="E-posta">
+				</div>
+				<div class="form-field">
+					<p>Tarih</p>
+					<input type="text" id="as">
+				</div>
+				<div class="form-field">
+					<p>Saat</p>
+					<select>
+						<option>  </option>
+						<option>08.00</option>
+						<option>09.00</option>
+						<option>10.00</option>
+						<option>11.00</option>
+						<option>13.00</option>
+						<option>14.00</option>
+						<option>15.00</option>
+						<option>16.00</option>
+						<option>17.00</option>
+						<option>18.00</option>
+					</select>
+				</div>
+				<button class="btn"> Randevu Al</button>
+				
+
+			</form>
+			
+		</div>
+	</div>
+
+
+</body>
+</html>
